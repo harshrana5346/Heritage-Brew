@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 13 — Customer Persona</title>
+<style>
+:root{
+  --wine:#6b0f1a; --muted:#fff; --shadow:0 12px 28px rgba(20,10,12,0.12);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#fffefc,#f7fff9);color:#2b0f10}
+.wrap{max-width:1100px;margin:36px auto;padding:24px}
+.header{text-align:center;font-size:32px;color:var(--wine);font-weight:800;margin-bottom:10px}
+.sub{text-align:center;color:#556;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{position:relative;border-radius:16px;overflow:hidden;min-height:220px;display:flex;align-items:flex-end;padding:18px;color:var(--muted);box-shadow:var(--shadow)}
+.card::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.55));z-index:0}
+.card .content{position:relative;z-index:1}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;font-size:14px;opacity:0.95}
+
+/* backgrounds provided by user */
+.u-youth{background-image:url('https://media.istockphoto.com/id/1363627613/photo/multiracial-group-of-young-friends-bonding-outdoors.jpg?s=612x612&w=0&k=20&c=ManrdILSin-JyEZqtdREJqnYUTIJaEQg9FrEh2V8OHA=');background-size:cover;background-position:center}
+.wellness{background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSqP1T1t3OXGYCrGUs9q6a7dU-DNMdQD9drQ&s');background-size:cover;background-position:center}
+.eco{background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvYz8zWNXTcRKGqL2RID2QIYAsUqaIBlSkZQ&s');background-size:cover;background-position:center}
+.export{background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9d6lEXXC4VDP0owFW9pJLwUFySo7onQftw&s');background-size:cover;background-position:center}
+.hospitality{background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMGxQ3YN1IwqlQpCUG4nUAWv_R8VumZr6kQ&s');background-size:cover;background-position:center}
+
+.footer{margin-top:20px;text-align:center;color:#4a774f;font-weight:700}
+
+@media(max-width:700px){.card{min-height:180px;padding:14px}.header{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">Customer Persona — Target Audience</div>
+  <div class="sub">Understanding who will buy Heritage Brews helps us design products, packaging and channels that resonate.</div>
+
+  <div class="grid">
+    <div class="card u-youth">
+      <div class="content">
+        <h3>👩‍🎓 Urban Youth</h3>
+        <p>Health-conscious millennials seeking trendy, sustainable alternatives to alcohol & soda.</p>
+      </div>
+    </div>
+
+    <div class="card wellness">
+      <div class="content">
+        <h3>🌱 Wellness Seekers</h3>
+        <p>Ayurveda, yoga, and organic lifestyle followers looking for functional beverages.</p>
+      </div>
+    </div>
+
+    <div class="card eco">
+      <div class="content">
+        <h3>♻️ Eco-Conscious Buyers</h3>
+        <p>Environmentally aware consumers preferring sustainable packaging & ethical sourcing.</p>
+      </div>
+    </div>
+
+    <div class="card export">
+      <div class="content">
+        <h3>🌍 Export Market</h3>
+        <p>International customers interested in exotic, cultural, and premium Indian craft beverages.</p>
+      </div>
+    </div>
+
+    <div class="card hospitality">
+      <div class="content">
+        <h3>🍹 Hospitality & Cafes</h3>
+        <p>Premium cafes, cultural lounges, and restaurants aiming to offer unique heritage drinks.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Understanding our audience = crafting the right heritage experience 🌿</div>
+</div>
+</body>
+</html>

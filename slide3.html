@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slide 3 — Important Drinks of the World & Economy</title>
+  <style>
+    :root{
+      --bg1:#fff7f5; --bg2:#fff1ef; --wine:#6b0f1a; --grape:#7a2b4b; --gold:#d69e2e; --muted:#6b6b6b; --card:#fff; --shadow:0 18px 36px rgba(20,10,12,0.08); --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:linear-gradient(180deg,var(--bg1),var(--bg2)); margin:0; color:#2b0f10}
+    .wrap{max-width:var(--maxw);margin:30px auto;padding:28px}
+
+    h2{margin:0 0 20px;color:var(--grape);font-size:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform 240ms, box-shadow 240ms;display:flex;flex-direction:column}
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(20,10,12,0.12)}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .card-content{padding:14px}
+    .card-content h4{margin:0;font-size:18px;color:var(--wine)}
+    .card-content p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+
+    .lesson{margin-top:32px;padding:20px;border-radius:16px;background:linear-gradient(180deg,#fff,#fffaf8);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center}
+    .lesson h3{margin:0 0 10px;color:var(--wine)}
+    .lesson p{color:var(--muted);font-size:15px}
+    .lesson img{width:100%;border-radius:12px;object-fit:cover;height:200px}
+
+    .navs{display:flex;justify-content:space-between;margin-top:22px}
+    .nav-btn{background:transparent;border:2px solid rgba(107,15,26,0.06);padding:10px 14px;border-radius:12px;color:var(--wine);font-weight:800;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h2>Important Drinks of the World & Economy</h2>
+
+    <div class="grid" id="cards">
+      <div class="card">
+        <img src="https://courses.iid.org.in/public//uploads/media_manager/543.png" alt="Wine">
+        <div class="card-content">
+          <h4>Wine (France, Italy, Spain)</h4>
+          <p>Boosts tourism & exports; cultural identity deeply tied to wine-making regions.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://static.toiimg.com/thumb/imgsize-23456,msid-68668410,width-600,resizemode-4/68668410.jpg" alt="Beer">
+        <div class="card-content">
+          <h4>Beer (Germany, Belgium)</h4>
+          <p>Millions employed in breweries; festivals like Oktoberfest drive local economies.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2019/08/shutterstock_1101170873.jpg" alt="Whisky">
+        <div class="card-content">
+          <h4>Whisky (Scotland, Ireland, Japan)</h4>
+          <p>A billion-dollar global export; associated with premium branding.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71vALloAfzL._UF894,1000_QL80_.jpg" alt="Tequila">
+        <div class="card-content">
+          <h4>Tequila (Mexico)</h4>
+          <p>Supports agave farmers; Mexican identity & global branding success.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.assamicaagro.in/cdn/shop/articles/Untitled_design_26_1200x1200.png?v=1592799889" alt="Coffee">
+        <div class="card-content">
+          <h4>Coffee & Tea (Global)</h4>
+          <p>Crucial for rural livelihoods across Asia, Africa, and Latin America.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lesson">
+      <div>
+        <h3>Lesson for India</h3>
+        <p>If branded well, local heritage drinks can empower farmers, create jobs, and build a strong cultural identity — just like wine, beer, and coffee did globally.</p>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Indian_traditional_drinks.jpg" alt="Heritage Indian Drinks">
+    </div>
+
+    <div class="navs">
+      <button class="nav-btn" id="backBtn">← Slide 2</button>
+      <button class="nav-btn" id="nextBtn">Slide 4 →</button>
+    </div>
+  </div>
+
+  <script>
+    // keyboard navigation
+    document.getElementById('backBtn').addEventListener('click', ()=>{
+      location.href = location.pathname.replace(/[^/]*$/,'') + 'slide2.html';
+    });
+    document.getElementById('nextBtn').addEventListener('click', ()=>{
+      location.href = location.pathname.replace(/[^/]*$/,'') + 'slide4.html';
+    });
+    document.addEventListener('keydown',(e)=>{
+      if(e.key==='ArrowLeft') location.href = location.pathname.replace(/[^/]*$/,'') + 'slide2.html';
+      if(e.key==='ArrowRight') location.href = location.pathname.replace(/[^/]*$/,'') + 'slide4.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 20 — Closing</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#0b3d2e;--bg2:#1a5c45;--accent:#f4c542;--muted:#d9f5e9}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));height:100vh;display:flex;align-items:center;justify-content:center;color:#fff;overflow:hidden}
+
+.container{text-align:center;max-width:900px;padding:20px;position:relative;z-index:2}
+.quote{font-size:36px;font-weight:800;line-height:1.4;margin-bottom:20px;color:#fefefe;text-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.highlight{color:var(--accent)}
+.thankyou{margin-top:20px;font-size:20px;color:var(--muted)}
+
+/* Floating icons */
+.icon{position:absolute;width:50px;height:50px;opacity:0.15;animation:float 12s linear infinite}
+.icon.leaf{top:10%;left:15%;animation-duration:18s}
+.icon.honey{top:70%;left:25%;animation-duration:20s}
+.icon.grain{top:40%;left:80%;animation-duration:15s}
+
+@keyframes float{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-30px) rotate(15deg)}100%{transform:translateY(0) rotate(0)}}
+
+.logo{position:absolute;bottom:20px;right:30px;width:100px;opacity:0.9}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="quote">“<span class="highlight">Heritage Brews</span> — Not just a drink, but a sip of history, culture, and sustainability.” 🌿🍯</div>
+    <div class="thankyou">🙏 Thank You</div>
+  </div>
+
+  <!-- Floating icons -->
+  <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" class="icon leaf" alt="leaf">
+  <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" class="icon honey" alt="honey">
+  <img src="https://cdn-icons-png.flaticon.com/512/415/415733.png" class="icon grain" alt="grain">
+
+  <!-- Logo -->
+  <img src="logo.jpg" class="logo" alt="Heritage Brews Logo">
+</body>
+</html>

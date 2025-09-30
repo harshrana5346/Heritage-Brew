@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Heritage Brews — Integrated Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1720;--panel:#0b1220;--accent:#6b0f1a;--muted:#9aa4ad}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#f9f7f5,#fff);color:#0b1220}
+.app{display:flex;min-height:100vh}
+.sidebar{width:280px;background:linear-gradient(180deg,#fff,#fff8f6);border-right:1px solid #eee;padding:20px}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.logo img{height:44px;width:auto}
+.brand{font-weight:800;color:var(--accent);font-size:18px}
+.nav{margin-top:18px}
+.nav a{display:block;padding:10px 12px;border-radius:10px;color:#222;text-decoration:none;margin-bottom:6px}
+.nav a.active{background:linear-gradient(90deg,#fff0f0,#fff);box-shadow:0 6px 18px rgba(107,15,26,0.06);font-weight:700}
+.footer{position:absolute;bottom:20px;padding:20px;color:var(--muted);font-size:13px}
+
+.viewer{flex:1;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#fff;border-bottom:1px solid #eee}
+.topbar .title{font-weight:700;color:var(--accent)}
+.controls{display:flex;gap:10px}
+.button{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;border:none;cursor:pointer}
+
+.frame-wrap{flex:1;display:flex;align-items:stretch;justify-content:center;padding:20px;background:linear-gradient(180deg,#fff,#fcfbfa)}
+.frame{width:100%;max-width:1200px;height:80vh;border-radius:12px;overflow:hidden;border:1px solid #eee;box-shadow:0 12px 40px rgba(15,20,25,0.06)}
+.frame iframe{width:100%;height:100%;border:0}
+
+@media(max-width:900px){.sidebar{display:none}.topbar .title{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><img src="logo.jpg" alt="logo" onerror="this.style.display='none'"/><div class="brand">Heritage Brews</div></div>
+    <div class="nav" id="nav">
+      <!-- Navigation links to slides. Ensure slide files are named Slide1.html ... Slide20.html in the same folder -->
+      <a href="#" data-src="Slide1.html">1 • Title</a>
+      <a href="#" data-src="Slide2.html">2 • Role of Drinks</a>
+      <a href="#" data-src="Slide3.html">3 • Important Drinks of the World</a>
+      <a href="#" data-src="Slide4.html">4 • The Problem</a>
+      <a href="#" data-src="Slide5.html">5 • The Solution</a>
+      <a href="#" data-src="Slide6.html">6 • Ancient Drinks Carousel</a>
+      <a href="#" data-src="Slide7.html">7 • Madhu Mead</a>
+      <a href="#" data-src="Slide8.html">8 • Packaging Innovation</a>
+      <a href="#" data-src="Slide9.html">9 • How It Works</a>
+      <a href="#" data-src="Slide10.html">10 • Sustainability Impact</a>
+      <a href="#" data-src="Slide11.html">11 • Business Model</a>
+      <a href="#" data-src="Slide12.html">12 • Future Vision</a>
+      <a href="#" data-src="Slide13.html">13 • Customer Persona</a>
+      <a href="#" data-src="Slide14.html">14 • Non-Alcoholic Trends</a>
+      <a href="#" data-src="Slide15.html">15 • Alcoholic Trends</a>
+      <a href="#" data-src="Slide16.html">16 • (extra)</a>
+      <a href="#" data-src="Slide17.html">17 • (extra)</a>
+      <a href="#" data-src="Slide18.html">18 • (extra)</a>
+      <a href="#" data-src="Slide19.html">19 • (extra)</a>
+      <a href="#" data-src="Slide20.html">20 • Closing</a>
+    </div>
+    <div class="footer">Tip: Place each slide HTML file (Slide1.html → Slide20.html) in the same folder as this index. Click a link to load the slide.</div>
+  </aside>
+
+  <section class="viewer">
+    <div class="topbar">
+      <div class="title">Heritage Brews — Presentation Viewer</div>
+      <div class="controls">
+        <button class="button" id="prev">Prev</button>
+        <button class="button" id="next">Next</button>
+        <button class="button" id="fullscreen">Fullscreen</button>
+      </div>
+    </div>
+
+    <div class="frame-wrap">
+      <div class="frame" id="frame"><iframe id="slideFrame" src="Slide1.html"></iframe></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  const links = Array.from(document.querySelectorAll('#nav a'));
+  const iframe = document.getElementById('slideFrame');
+  let index = 0;
+
+  function setActive(i){
+    links.forEach(l=>l.classList.remove('active'));
+    links[i].classList.add('active');
+    iframe.src = links[i].dataset.src;
+    index = i;
+  }
+
+  links.forEach((l,i)=>{l.addEventListener('click',e=>{e.preventDefault();setActive(i)})});
+  setActive(0);
+
+  document.getElementById('prev').addEventListener('click',()=>{setActive((index-1+links.length)%links.length)});
+  document.getElementById('next').addEventListener('click',()=>{setActive((index+1)%links.length)});
+
+  document.getElementById('fullscreen').addEventListener('click',()=>{
+    const f = document.getElementById('frame');
+    if(!document.fullscreenElement) f.requestFullscreen().catch(()=>{});
+    else document.exitFullscreen();
+  });
+
+  // keyboard shortcuts
+  window.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight') document.getElementById('next').click();
+    if(e.key==='ArrowLeft') document.getElementById('prev').click();
+  });
+})();
+</script>
+</body>
+</html>

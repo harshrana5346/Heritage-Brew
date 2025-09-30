@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 8 — Packaging Innovation</title>
+<style>
+:root{
+  --wine:#6b0f1a; --muted:#555; --shadow:0 10px 25px rgba(20,10,12,0.12);
+}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#fffdf9,#fff7f5);color:#2b0f10}
+.wrap{max-width:1100px;margin:40px auto;padding:20px}
+.header{text-align:center;font-size:32px;color:var(--wine);font-weight:800;margin-bottom:30px}
+
+.split{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.image-area{flex:1;min-width:320px;display:flex;justify-content:center}
+.image-area img{width:100%;max-width:360px;height:auto;border-radius:20px;box-shadow:var(--shadow);}
+
+.infographic{flex:1;min-width:320px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.point{background:#fff;border-radius:16px;padding:18px;box-shadow:var(--shadow);display:flex;align-items:flex-start;gap:12px;transition:transform .3s ease}
+.point:hover{transform:translateY(-4px)}
+.icon{font-size:22px}
+.point h4{margin:0;font-size:16px;color:var(--wine)}
+.point p{margin:4px 0 0;font-size:14px;color:var(--muted);line-height:1.4}
+
+@media(max-width:900px){.split{flex-direction:column}.image-area img{max-width:280px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">Packaging Innovation</div>
+
+  <div class="split">
+    <div class="image-area">
+      <!-- Place your bottle image in the same folder as this HTML file and name it bottle.jpg -->
+      <img src="bottle.jpg" alt="Wooden Bottle">
+    </div>
+
+    <div class="infographic">
+      <div class="point">
+        <div class="icon">🌳</div>
+        <div><h4>Sustainable Wood</h4><p>Bottles crafted from eco-friendly, renewable wood.</p></div>
+      </div>
+
+      <div class="point">
+        <div class="icon">🌲</div>
+        <div><h4>Pine Latex Lining</h4><p>Natural waterproof, food-safe inner lining.</p></div>
+      </div>
+
+      <div class="point">
+        <div class="icon">♻️</div>
+        <div><h4>Eco-Friendly Alternative</h4><p>Replaces plastic & glass packaging, reducing waste.</p></div>
+      </div>
+
+      <div class="point">
+        <div class="icon">❄️</div>
+        <div><h4>Natural Insulation</h4><p>Keeps drinks cool and fresh for longer periods.</p></div>
+      </div>
+
+      <div class="point">
+        <div class="icon">🔄</div>
+        <div><h4>Reusable Design</h4><p>Supports a circular economy model with refill use.</p></div>
+      </div>
+
+      <div class="point">
+        <div class="icon">✨</div>
+        <div><h4>Premium Branding</h4><p>Positioned as a luxury, export-ready package.</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

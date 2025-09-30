@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 5 — The Solution</title>
+<style>
+:root{
+  --bg:#f9fff9; --wine:#6b0f1a; --accent:#2f9c62; --muted:#6b6b6b; --shadow:0 8px 18px rgba(20,10,12,0.1); --maxw:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system,'Segoe UI',Roboto,Arial; background:linear-gradient(180deg,var(--bg),#fff); margin:0;color:#2b0f10}
+.wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+
+.header{color:var(--wine);font-size:30px;font-weight:800;margin-bottom:20px;text-align:center}
+.lead{color:var(--muted);margin-bottom:40px;line-height:1.5;font-size:17px;text-align:center}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;justify-content:center}
+.card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:18px;text-align:center;transition:transform 0.3s ease}
+.card img{width:100%;height:220px;object-fit:contain;border-radius:14px;background:#fafafa}
+.card h4{margin:12px 0 8px;font-size:18px;color:var(--wine)}
+.card p{margin:0;font-size:14px;color:var(--muted);line-height:1.4}
+.card:hover{transform:translateY(-6px)}
+
+.navs{display:flex;justify-content:space-between;margin-top:40px}
+.nav-btn{background:transparent;border:2px solid rgba(0,0,0,0.05);padding:12px 16px;border-radius:14px;color:var(--wine);font-weight:800;cursor:pointer;font-size:15px}
+
+@media(max-width:900px){.grid{grid-template-columns:1fr}.card img{height:200px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">The Solution</div>
+  <div class="lead">Heritage Brews combines tradition, innovation, and sustainability into four powerful solutions.</div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://www.sapiens.org/app/uploads/2020/11/01_Ancient-and-archeological-artwork-in-the-Israel-Beer-Breweries-IBBL-museum-in-Ashkelon-Israel_Credit-Alamy_compressed-1024x681.jpg" alt="Revival">
+      <h4>Revival of Ancient Drinks</h4>
+      <p>Reintroducing heritage beverages like Soma, Sura, and Madhu using safe modern food technology.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://www.smartfood.org/wp-content/uploads/2021/03/Millet-Bank-3.jpg" alt="Organic & Eco-Friendly">
+      <h4>Organic & Eco-Friendly</h4>
+      <p>Craft beverages made with organic ingredients and Ayurvedic formulations for wellness and sustainability.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/61/51/25/61512581b4d92055ff9ba2d0b02063f0.jpg" alt="Wooden Bottles">
+      <h4>Wooden Bottle Packaging</h4>
+      <p>Eco-friendly bottles made of wood, lined with pine latex — reusable, premium, and sustainable.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://fastercapital.com/i/Cultural-Heritage-and-Entrepreneurship--How-to-Incorporate-Your-Cultural-Legacy-into-Your-Business-Model--Infusing-Tradition-with-Innovation.webp" alt="Tradition + Innovation">
+      <h4>Tradition + Innovation</h4>
+      <p>Blending heritage recipes with innovation to create impactful and future-ready beverages.</p>
+    </div>
+  </div>
+
+  <div class="navs">
+    <button class="nav-btn" onclick="location.href='slide4.html'">← Slide 4</button>
+    <button class="nav-btn" onclick="location.href='slide6.html'">Slide 6 →</button>
+  </div>
+</div>
+</body>
+</html>

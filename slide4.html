@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 4 — The Problem</title>
+<style>
+:root{
+  --bg:#fff8f6; --wine:#6b0f1a; --accent:#d9534f; --muted:#6b6b6b; --card:#fff; --ok:#2f9c62; --shadow:0 10px 20px rgba(20,10,12,0.1); --maxw:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system,'Segoe UI',Roboto,Arial; background:linear-gradient(180deg,var(--bg),#fff); margin:0;color:#2b0f10}
+.wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+
+.grid-split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:flex-start}
+.header{color:var(--wine);font-size:28px;font-weight:800;margin-bottom:14px}
+.lead{color:var(--muted);margin-bottom:20px;line-height:1.5;font-size:17px}
+
+.illustration{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card-img{background:#fff;border-radius:20px;overflow:hidden;width:260px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;transition:transform 0.3s ease;padding-bottom:10px}
+.card-img img{width:100%;height:150px;object-fit:cover}
+.card-img h4{margin:8px 0 6px;font-size:17px;color:var(--wine)}
+.card-img p{margin:0 10px 10px;font-size:14px;color:var(--muted);line-height:1.4}
+.card-img:hover{transform:translateY(-6px)}
+
+.pain{padding:16px;border-radius:14px;border:1px solid rgba(215,83,79,0.15);background:linear-gradient(180deg,#fff,#fff7f6);margin-bottom:14px;transition:all 0.3s ease}
+.pain:hover{transform:translateY(-4px);box-shadow:0 6px 14px rgba(217,83,79,0.15)}
+.pain h4{margin:0;color:var(--accent);font-size:17px}
+.pain p{margin:8px 0 0;color:var(--muted);line-height:1.5;font-size:15px}
+
+.opportunity{padding:16px;border-radius:14px;background:linear-gradient(90deg,#f0fff3,#e6f9ec);border:1px solid rgba(47,156,98,0.15)}
+.opportunity h4{margin:0;color:var(--ok);font-size:17px}
+
+.navs{display:flex;justify-content:space-between;margin-top:28px}
+.nav-btn{background:transparent;border:2px solid rgba(0,0,0,0.05);padding:12px 16px;border-radius:14px;color:var(--wine);font-weight:800;cursor:pointer;font-size:15px}
+
+@media(max-width:900px){.grid-split{grid-template-columns:1fr}.illustration{justify-content:center}.card-img{width:220px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="grid-split">
+    <div class="left">
+      <div class="header">The Problem</div>
+      <div class="lead">India had a rich heritage of beverages (Soma, Sura, Madhu, Asava, Parisrut). Today many traditions are vanishing — replaced by foreign soft drinks and modern alcohol; health, culture and sustainability are at risk.</div>
+
+      <div class="illustration">
+        <div class="card-img" title="Heritage fading">
+          <img src="https://c8.alamy.com/comp/ET1X6H/bhutanese-man-drinks-liquor-out-of-an-ornamental-copper-bowl-paro-ET1X6H.jpg" alt="Tribal drinks">
+          <h4>Heritage fading</h4>
+          <p>Traditional beverages and tribal practices are disappearing, threatening cultural identity.</p>
+        </div>
+        <div class="card-img" title="Plastic pollution">
+          <img src="https://www.springwellwater.com/wp-content/uploads/2020/09/plastic-bottles-waste-1.jpg" alt="Plastic bottles waste">
+          <h4>Plastic pollution</h4>
+          <p>Plastic bottles dominate packaging, adding to pollution and harming sustainability goals.</p>
+        </div>
+        <div class="card-img" title="Foreign soft drinks">
+          <img src="https://media.gettyimages.com/id/sb10069180e-001/photo/soda-bottles-in-rack-full-frame.jpg?s=1024x1024&w=gi&k=20&c=sNRM88OzPzTCFnbRd6xqyuX9S-A-hspneAU8rEVJHNE=" alt="Soda bottles">
+          <h4>Foreign soft drinks</h4>
+          <p>Imported sodas and alcohol brands dominate markets, sidelining Indian heritage drinks.</p>
+        </div>
+        <div class="card-img" title="Health concerns">
+          <img src="https://lh3.googleusercontent.com/proxy/snxm2hR7gWBX4UV1E15u2B3eTaIk1J7k4wxIZO5a-UXeEy4y9aCLBXw5xI5KCmgeGDydLUTEdReQXniWCe9jYmXo3zsojDxzy2i6JZ_74XUEw_gLdDamXn1BEJghoKK_48EjQ9ph3JxYq_XM6UbKEvFodA" alt="Unhealthy drinks">
+          <h4>Health concerns</h4>
+          <p>Rising lifestyle diseases are linked with sugary, processed drinks and unhealthy habits.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="pain">
+        <h4>Vanishing Traditions</h4>
+        <p>Ancient beverages like Soma, Sura, Madhu, Asava and Parisrut are fading as urban markets shift and knowledge transmission declines.</p>
+      </div>
+
+      <div class="pain">
+        <h4>Market Flooded by Foreign Brands</h4>
+        <p>Global soft drink and alcohol brands dominate mainstream shelves, reducing visibility for local heritage drinks.</p>
+      </div>
+
+      <div class="pain">
+        <h4>Health & Packaging Issues</h4>
+        <p>Processed soft drinks and single-use plastic packaging increase health concerns and environmental waste.</p>
+      </div>
+
+      <div class="opportunity">
+        <h4>Opportunity</h4>
+        <p>Rising demand for organic, sustainable and traditional beverages creates a market window for Heritage Brews to revive and scale heritage drinks.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="navs">
+    <button class="nav-btn" onclick="location.href=location.pathname.replace(/[^/]*$/,'') + 'slide3.html'">← Slide 3</button>
+    <button class="nav-btn" onclick="location.href=location.pathname.replace(/[^/]*$/,'') + 'slide5.html'">Slide 5 →</button>
+  </div>
+</div>
+</body>
+</html>

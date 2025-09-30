@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 14 — Market Research (Non-Alcoholic Trends)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#e9fbf7;--bg2:#f3f9ff;--accent:#1aa675;--accent2:#2b6cff;--muted:#5a5a5a}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#10221f}
+.wrap{max-width:1200px;margin:28px auto;padding:28px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.title{font-size:28px;font-weight:800;color:#0b3a2f}
+.subtitle{color:var(--muted)}
+.grid{display:grid;grid-template-columns:360px 1fr;gap:24px;align-items:start}
+.left{background:linear-gradient(180deg,#fff,#f8fffb);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(12,30,24,0.06)}
+.right{background:linear-gradient(180deg,#fff,#f7fbff);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(12,30,24,0.06)}
+.stat{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.kpi{background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 18px rgba(10,20,18,0.06);display:flex;align-items:center;gap:12px}
+.kpi strong{font-size:18px;color:#072b22}
+.kpi span{color:var(--muted);font-size:13px}
+
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.card{background:linear-gradient(180deg,#ffffff,#fbfffc);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(10,20,18,0.06)}
+.card h4{margin:0 0 8px;font-size:16px;color:#07372e}
+.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.legend .item{display:flex;gap:8px;align-items:center}
+.dot{width:12px;height:12px;border-radius:3px}
+
+.footer{margin-top:14px;color:var(--muted);font-size:13px}
+
+.note{margin-top:12px;background:linear-gradient(180deg,#fff,#f6fff7);padding:12px;border-radius:10px;color:#063928;box-shadow:0 6px 18px rgba(10,20,18,0.04)}
+
+canvas{max-width:100%;height:250px !important}
+
+@media(max-width:1000px){.grid{grid-template-columns:1fr}.charts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div>
+      <div class="title">Market Research — Non-Alcoholic Trends (India)</div>
+      <div class="subtitle">Data-driven insights showing growth, consumer preferences and opportunities.</div>
+    </div>
+    <div style="text-align:right;color:var(--muted);font-size:13px">Interactive charts • Data sources: IMARC, Grand View Research, Industry reports</div>
+  </div>
+
+  <div class="grid">
+    <div class="left">
+      <div class="stat">
+        <div class="kpi"><div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#17b48f);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">₹</div><div><strong>₹1.37 Trillion</strong><br><span>Non-alcoholic market (2023)</span></div></div>
+        <div class="kpi"><div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent2),#6fa8ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">₹</div><div><strong>₹854 Billion</strong><br><span>Health Drinks (2024)</span></div></div>
+        <div class="kpi"><div style="width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ffb36b,#ffd89b);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">%</div><div><strong>~11.8%</strong><br><span>Health Drinks CAGR (2024–2033)</span></div></div>
+      </div>
+
+      <div class="card">
+        <h4>Quick Insight</h4>
+        <div style="font-size:14px;color:#144336;line-height:1.5">Youth preferences are shifting toward craft, organic, low-alcohol and non-alcoholic beverages. Sustainability and natural ingredients are primary purchase drivers.</div>
+        <div class="note">70% of urban millennials prefer beverages with natural/functional ingredients. Low/no added sugar options are gaining share — Varun Beverages reported 55% sales from this category in H1 2025.</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="charts">
+        <div class="card">
+          <h4>Growth Projection — Health Drinks (INR)</h4>
+          <canvas id="lineChart"></canvas>
+          <div class="legend"><div class="item"><div class="dot" style="background:#2b6cff"></div><div>Health Drinks: ₹854B → ₹2525B (2024→2033)</div></div></div>
+        </div>
+
+        <div class="card">
+          <h4>Market Breakdown — 2033 (INR)</h4>
+          <canvas id="barChart"></canvas>
+          <div class="legend" style="margin-top:10px">
+            <div class="item"><div class="dot" style="background:#1aa675"></div><div>Non-alcoholic overall ₹6.09T</div></div>
+            <div class="item"><div class="dot" style="background:#2b6cff"></div><div>Health Drinks ₹2.53T</div></div>
+            <div class="item"><div class="dot" style="background:#f2b138"></div><div>Functional Drinks ₹653B</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4>Market Forecast Snapshot</h4>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+          <div style="flex:1;min-width:180px;background:linear-gradient(180deg,#fff,#f7fff9);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,18,0.04)"><strong>₹2.10 Trillion</strong><div style="font-size:13px;color:var(--muted)">Projected market (2029)</div></div>
+          <div style="flex:1;min-width:180px;background:linear-gradient(180deg,#fff,#f7fbff);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,18,0.04)"><strong>₹2.53 Trillion</strong><div style="font-size:13px;color:var(--muted)">Health Drinks (2033 forecast)</div></div>
+          <div style="flex:1;min-width:180px;background:linear-gradient(180deg,#fff,#fff7f0);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,18,0.04)"><strong>₹6.09 Trillion</strong><div style="font-size:13px;color:var(--muted)">India non-alc market forecast (2033)</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">Note: All values converted to INR (1 USD ≈ ₹88.8). Data compiled from IMARC, Grand View Research, and industry market reports.</div>
+</div>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Line chart - Health Drinks growth in INR
+  const ctx = document.getElementById('lineChart').getContext('2d');
+  const lineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [2024,2026,2028,2030,2032,2033],
+      datasets: [{
+        label: 'Health Drinks (₹ Billion)',
+        data: [854, 1109, 1446, 1819, 2229, 2525],
+        borderColor: '#2b6cff',
+        backgroundColor: 'rgba(43,108,255,0.12)',
+        tension: 0.32,
+        pointRadius:5,
+        pointBackgroundColor:'#fff',
+        pointBorderColor:'#2b6cff',
+        fill:true
+      }]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      aspectRatio:2,
+      plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false}},
+      scales:{y:{beginAtZero:false, title:{display:true,text:'INR Billion'}}, x:{grid:{display:false}}}
+    }
+  });
+
+  // Bar chart - Market Breakdown 2033 in INR
+  const ctx2 = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Non-alc Overall','Health Drinks','Functional Drinks'],
+      datasets: [{
+        label: '2033 Forecast (₹ Billion)',
+        data: [6090,2525,653],
+        backgroundColor: ['#1aa675','#2b6cff','#f2b138']
+      }]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      aspectRatio:1.6,
+      plugins:{legend:{display:false}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'INR Billion'}}}
+    }
+  });
+</script>
+</body>
+</html>

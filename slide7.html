@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slides 7–12 — Product Line Carousel</title>
+<style>
+:root{
+  --wine:#6b0f1a; --muted:#fff; --shadow:0 12px 28px rgba(20,10,12,0.25);
+}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; margin:0;background:linear-gradient(180deg,#fffdf9,#fff7f5);color:#2b0f10}
+.wrap{max-width:1100px;margin:28px auto;padding:28px}
+.header{text-align:center;font-size:32px;color:var(--wine);font-weight:800;margin-bottom:10px}
+.lead{text-align:center;color:#444;margin-bottom:32px;font-size:17px}
+
+.carousel{position:relative;overflow:hidden;border-radius:24px;box-shadow:var(--shadow);background:#fff}
+.track{display:flex;transition:transform 500ms cubic-bezier(.2,.9,.2,1)}
+.slide{min-width:100%;display:flex;align-items:center;justify-content:center}
+.card{border-radius:20px;padding:36px;max-width:850px;width:90%;margin:auto;box-shadow:var(--shadow);text-align:left;transition:transform .3s ease;background-size:cover;background-position:center;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);z-index:0}
+.card *{position:relative;z-index:1;color:var(--muted)}
+.card:hover{transform:translateY(-6px)}
+.card h2{margin:0 0 16px;font-size:26px;color:#fff}
+.card ul{margin:0;padding-left:18px;list-style:disc}
+.card li{margin:4px 0;font-size:15px;line-height:1.6}
+
+.controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
+.btn{pointer-events:auto;background:#fff;border-radius:50%;border:none;padding:12px 15px;margin:8px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.12);font-size:18px;color:var(--wine);transition:background .2s}
+.btn:hover{background:#f7f3f2}
+
+.dots{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.dot{width:12px;height:12px;border-radius:50%;background:#e0d9d9;cursor:pointer;transition:background .3s}
+.dot.active{background:var(--wine)}
+
+@media(max-width:700px){.card{padding:20px;width:95%}.card h2{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">Product Line — Our Modern Versions</div>
+  <div class="lead">Each beverage reimagines India’s ancient heritage into a modern, sustainable, and premium experience.</div>
+
+  <div class="carousel" id="carousel">
+    <div class="track" id="track">
+
+      <!-- Slide 7: Madhu Mead -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/04/honey-1296x728-header.jpg?w=1155&h=1528')">
+          <h2>🍯 Madhu Mead – Honey-based Wellness Drink</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Madhu (fermented honey)</li>
+            <li><strong>Earlier:</strong> Fermented honey diluted with water</li>
+            <li><strong>Now:</strong> Still present in tribal belts; modern mead breweries also exist</li>
+            <li><strong>Revival:</strong> India’s ancient super-drink, available in both alcoholic & non-alcoholic formats</li>
+            <li><strong>Our Version:</strong> Mead (honey wine) and non-alcoholic honey wellness drink</li>
+            <li><strong>Type:</strong> Alcoholic (craft mead) & Non-alcoholic (herbal honey drink)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 8: Millet Sura -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://mametimeghalaya.com/wp-content/uploads/2024/06/millet-sorghum-field-feed-livestock__-1-1024x683_.jpg')">
+          <h2>🌾 Millet Sura – Millet/Rice Craft Beverage</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Sura (fermented grain drink)</li>
+            <li><strong>Earlier:</strong> Made with barley, rice, millet, and jaggery; consumed by commoners & warriors</li>
+            <li><strong>Now:</strong> Survives as Handia (Jharkhand) and Chhang (Himalayas)</li>
+            <li><strong>Revival:</strong> Can return as millet-based craft beer or kombucha-style non-alcoholic drink</li>
+            <li><strong>Our Version:</strong> Low-alcohol millet beer or probiotic kombucha-style beverage</li>
+            <li><strong>Type:</strong> Both alcoholic & non-alcoholic options</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 9: Parisrut Classic -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://media.istockphoto.com/id/483827022/photo/rice-field.jpg?s=612x612&w=0&k=20&c=QrmX8OaXklzvigDYPZFj-2fj0BRCabfDf80z8n7EkiA=')">
+          <h2>🥃 Parisrut Classic – Strong Millet/Rice Brew</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Parisrut (strong grain mash drink)</li>
+            <li><strong>Earlier:</strong> Mentioned in the Atharvaveda as a strong millet/rice beverage</li>
+            <li><strong>Now:</strong> Still brewed in Odisha & Tripura as tribal drinks</li>
+            <li><strong>Revival:</strong> Premium strong craft millet brew with controlled fermentation</li>
+            <li><strong>Our Version:</strong> Premium strong millet beer</li>
+            <li><strong>Type:</strong> Alcoholic (heritage beer)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 10: Maireya Brew -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://4.imimg.com/data4/JP/VC/ANDROID-48347978/product-500x500.jpeg')">
+          <h2>🍹 Maireya Brew – Spiced Jaggery Festive Drink</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Maireya (jaggery + spices)</li>
+            <li><strong>Earlier:</strong> Jaggery-based liquor with pepper & herbs</li>
+            <li><strong>Now:</strong> Continues as Mahua/jaggery brews in tribal belts</li>
+            <li><strong>Revival:</strong> Modernized as spiced jaggery mocktails & mixers for urban wellness</li>
+            <li><strong>Our Version:</strong> Herbal spiced mocktail syrup (non-alcoholic) or light spiced liquor</li>
+            <li><strong>Type:</strong> Non-alcoholic mocktail with optional low-alcohol version</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 11: Asava & Arishta -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://www.aryavaidyasala.com/wp-content/uploads/2024/11/Arishta-Aasava-1536x1409-1.jpg')">
+          <h2>🌿 Asava & Arishta – Ayurvedic Herbal Wines</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Ayurveda tonics</li>
+            <li><strong>Earlier:</strong> Fermented tonics for digestion & stamina</li>
+            <li><strong>Now:</strong> Still widely available in Ayurveda pharmacies</li>
+            <li><strong>Revival:</strong> Elevated with premium wellness branding & eco-friendly packaging</li>
+            <li><strong>Our Version:</strong> Same proven formula, with modern branding & packaging</li>
+            <li><strong>Type:</strong> Mildly alcoholic (already legal as medicine)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 12: Palm Neera -->
+      <div class="slide">
+        <div class="card" style="background-image:url('https://cdn.britannica.com/24/162724-050-6C219853/Date-palm.jpg')">
+          <h2>🌴 Palm Neera – Non-fermented Palm Sap</h2>
+          <ul>
+            <li><strong>Ancient base:</strong> Varuni → toddy/palm sap</li>
+            <li><strong>Earlier:</strong> Mythical liquor of Goddess Varuni from Samudra Manthan</li>
+            <li><strong>Now:</strong> Exists as palm toddy/Neera</li>
+            <li><strong>Revival:</strong> Fresh, pasteurized palm sap marketed as a health drink</li>
+            <li><strong>Our Version:</strong> Sweet, mineral-rich palm sap (pasteurized)</li>
+            <li><strong>Type:</strong> Non-alcoholic health drink</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="controls" aria-hidden>
+      <button class="btn" id="prev">◀</button>
+      <button class="btn" id="next">▶</button>
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+</div>
+
+<script>
+(function(){
+  const track=document.getElementById('track');
+  const slides=Array.from(track.children);
+  const prev=document.getElementById('prev');
+  const next=document.getElementById('next');
+  const dotsEl=document.getElementById('dots');
+  let index=0;
+
+  slides.forEach((s,i)=>{const d=document.createElement('div');d.className='dot';d.dataset.i=i;dotsEl.appendChild(d)});
+  const dots=Array.from(dotsEl.children);
+  function update(){
+    track.style.transform=`translateX(-${index*100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+  }
+  update();
+
+  prev.addEventListener('click',()=>{index=(index-1+slides.length)%slides.length;update()});
+  next.addEventListener('click',()=>{index=(index+1)%slides.length;update()});
+  dots.forEach(d=>d.addEventListener('click',e=>{index=Number(e.target.dataset.i);update()}));
+})();
+</script>
+</body>
+</html>

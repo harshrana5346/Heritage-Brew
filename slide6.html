@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 6 — Ancient Indian Drinks (Heritage Base)</title>
+<style>
+:root{
+  --maxw:1100px; --wine:#6b0f1a; --muted:#5f5f5f; --card-radius:18px; --shadow:0 10px 30px rgba(20,10,12,0.08);
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#fffefc,#fff7f5); margin:0;color:#2b0f10}
+.wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+.header{font-size:28px;color:var(--wine);font-weight:800;margin-bottom:8px}
+.lead{color:var(--muted);margin-bottom:20px}
+
+.carousel{position:relative;overflow:hidden;border-radius:20px}
+.track{display:flex;transition:transform 420ms cubic-bezier(.2,.9,.2,1)}
+.slide{min-width:100%;padding:36px;display:flex;gap:28px;align-items:center}
+.slide-card{flex:1;background:linear-gradient(180deg,#fff,#fff);border-radius:var(--card-radius);box-shadow:var(--shadow);padding:26px;min-height:240px;display:flex;flex-direction:column;justify-content:center}
+.slide h2{margin:0;font-size:24px;color:var(--wine)}
+.slide p{margin:10px 0 0;color:var(--muted);line-height:1.5}
+
+/* decorative gradient bar */
+.grad{width:64px;height:8px;border-radius:8px;margin-top:12px}
+
+.controls{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between;pointer-events:none}
+.btn{pointer-events:auto;background:#fff;border-radius:12px;border:1px solid rgba(0,0,0,0.06);padding:10px 12px;margin:4px;box-shadow:0 8px 20px rgba(0,0,0,0.06);cursor:pointer}
+.btn:active{transform:translateY(1px)}
+
+.dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.dot{width:10px;height:10px;border-radius:12px;background:#f0e9e9;cursor:pointer}
+.dot.active{background:var(--wine)}
+
+/* slide-specific gradients */
+.g-soma{background:linear-gradient(135deg,#ffe9d7,#fff2e8)}
+.g-sura{background:linear-gradient(135deg,#fff9e6,#fff3d9)}
+.g-parisrut{background:linear-gradient(135deg,#fff0f3,#fff7f9)}
+.g-madhu{background:linear-gradient(135deg,#fff6e7,#fff0d9)}
+.g-maireya{background:linear-gradient(135deg,#f5fff2,#eaffee)}
+.g-asava{background:linear-gradient(135deg,#f3f6ff,#eef4ff)}
+.g-varuni{background:linear-gradient(135deg,#fff0f8,#fff6fb)}
+.g-kilala{background:linear-gradient(135deg,#fff7f3,#fffbf6)}
+.g-harahuraka{background:linear-gradient(135deg,#f9fff8,#f2fff3)}
+.g-ayasthana{background:linear-gradient(135deg,#fff8f0,#fff2ea)}
+
+/* responsive */
+@media(min-width:900px){
+  .slide{padding:48px}
+  .slide-card{min-height:320px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">Ancient Indian Drinks (Heritage Base)</div>
+  <div class="lead">A quick carousel through traditional beverages — their ancient role and modern relevance.</div>
+
+  <div class="carousel" id="carousel">
+    <div class="track" id="track">
+      <!-- Soma -->
+      <div class="slide">
+        <div class="slide-card g-soma">
+          <h2>Soma</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#ffd89b,#ff7a7a)"></div>
+          <p><strong>Ancient base:</strong> A sacred ritual drink consumed in Vedic ceremonies and symbol of divine communion.
+          <br><strong>Modern relevance:</strong> Primarily mytho-ritual; inspires beverages that celebrate ritual and purity.</p>
+        </div>
+      </div>
+
+      <!-- Sura -->
+      <div class="slide">
+        <div class="slide-card g-sura">
+          <h2>Sura</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#f8d38a,#ffb36b)"></div>
+          <p><strong>Ancient base:</strong> Grain-based fermented drink (barley, rice, millet, jaggery) commonly consumed for pleasure and strength.
+          <br><strong>Modern relevance:</strong> Survives as Handia/Chhang; great base for millet-craft beverages and probiotic versions.</p>
+        </div>
+      </div>
+
+      <!-- Parisrut -->
+      <div class="slide">
+        <div class="slide-card g-parisrut">
+          <h2>Parisrut</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#f7d6ff,#e7b3ff)"></div>
+          <p><strong>Ancient base:</strong> A stronger fermented grain mash noted in texts like the Atharvaveda.
+          <br><strong>Modern relevance:</strong> Parallels in tribal strong millet/rice beers — ideal for premium heritage brews.</p>
+        </div>
+      </div>
+
+      <!-- Madhu -->
+      <div class="slide">
+        <div class="slide-card g-madhu">
+          <h2>Madhu (Mead)</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#ffdca3,#f6b36b)"></div>
+          <p><strong>Ancient base:</strong> Honey-fermented wine (mead), associated with ritual and sweetness.
+          <br><strong>Modern relevance:</strong> Revivable as craft mead (alcoholic) and non-alcoholic honey wellness drinks.</p>
+        </div>
+      </div>
+
+      <!-- Maireya -->
+      <div class="slide">
+        <div class="slide-card g-maireya">
+          <h2>Maireya</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#c8f7d3,#7fe3a9)"></div>
+          <p><strong>Ancient base:</strong> Jaggery and spice brews, festive and spiced for community consumption.
+          <br><strong>Modern relevance:</strong> Perfect for spiced mocktail syrups, mixers, and light festive beverages.</p>
+        </div>
+      </div>
+
+      <!-- Asava & Arishta -->
+      <div class="slide">
+        <div class="slide-card g-asava">
+          <h2>Asava & Arishta</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#cfe2ff,#8fb7ff)"></div>
+          <p><strong>Ancient base:</strong> Ayurvedic fermented herbal tonics used for digestion and stamina.
+          <br><strong>Modern relevance:</strong> Still sold as Ayurvedic tonics — excellent for premium wellness branding.</p>
+        </div>
+      </div>
+
+      <!-- Varuni -->
+      <div class="slide">
+        <div class="slide-card g-varuni">
+          <h2>Varuni</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#ffd6ee,#ffb3e6)"></div>
+          <p><strong>Ancient base:</strong> Mythical liquor of goddess Varuni (linked to Samudra Manthan) — symbolic of sacred intoxication.
+          <br><strong>Modern relevance:</strong> Inspires branding and storytelling for palm-based drinks and toddy traditions.</p>
+        </div>
+      </div>
+
+      <!-- Kilāla -->
+      <div class="slide">
+        <div class="slide-card g-kilala">
+          <h2>Kilāla</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#fff2e1,#ffd1a8)"></div>
+          <p><strong>Ancient base:</strong> Lesser-known fermented grain drink cited in traditional lists.
+          <br><strong>Modern relevance:</strong> Opportunity for niche craft revivals and micro-regional branding.</p>
+        </div>
+      </div>
+
+      <!-- Harahuraka -->
+      <div class="slide">
+        <div class="slide-card g-harahuraka">
+          <h2>Harahuraka</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#eafff2,#b7ffd9)"></div>
+          <p><strong>Ancient base:</strong> Another traditional fermented grain beverage with ritual and communal roles.
+          <br><strong>Modern relevance:</strong> Culturally rich, ideal for storytelling-driven craft beverages.</p>
+        </div>
+      </div>
+
+      <!-- Ayasthana -->
+      <div class="slide">
+        <div class="slide-card g-ayasthana">
+          <h2>Ayasthana</h2>
+          <div class="grad" style="background:linear-gradient(90deg,#fff5ec,#ffe6d8)"></div>
+          <p><strong>Ancient base:</strong> Fermented grain drink appearing in classical sources.
+          <br><strong>Modern relevance:</strong> Adds depth to a heritage product range and regional narratives.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="controls" aria-hidden>
+      <button class="btn" id="prev">◀</button>
+      <button class="btn" id="next">▶</button>
+    </div>
+  </div>
+
+  <div class="dots" id="dots"></div>
+</div>
+
+<script>
+(function(){
+  const track = document.getElementById('track');
+  const slides = Array.from(track.children);
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const dotsEl = document.getElementById('dots');
+  let index = 0;
+
+  // create dots
+  slides.forEach((s,i)=>{
+    const d = document.createElement('div'); d.className='dot'; d.dataset.i=i; dotsEl.appendChild(d);
+  });
+  const dots = Array.from(dotsEl.children);
+  function update(){
+    track.style.transform = `translateX(-${index*100}%)`;
+    dots.forEach((d, i)=> d.classList.toggle('active', i===index));
+  }
+  update();
+
+  prev.addEventListener('click', ()=>{ index = (index-1+slides.length)%slides.length; update(); });
+  next.addEventListener('click', ()=>{ index = (index+1)%slides.length; update(); });
+
+  dots.forEach(d=> d.addEventListener('click', (e)=>{ index = Number(e.target.dataset.i); update(); }));
+
+  // swipe support
+  let startX=null;
+  document.getElementById('carousel').addEventListener('touchstart', e=>{ startX = e.touches[0].clientX });
+  document.getElementById('carousel').addEventListener('touchend', e=>{ if(startX===null) return; const endX = e.changedTouches[0].clientX; if(endX - startX > 40) prev.click(); else if(startX - endX > 40) next.click(); startX=null });
+
+  // keyboard navigation
+  document.addEventListener('keydown', e=>{
+    if(e.key==='ArrowLeft') prev.click();
+    if(e.key==='ArrowRight') next.click();
+  });
+})();
+</script>
+</body>
+</html>

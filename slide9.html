@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Slide 9 — How It Works (Process)</title>
+<style>
+:root{--accent:#2f9c62;--wine:#6b0f1a;--muted:#555;--shadow:0 10px 24px rgba(20,10,12,0.10);--maxw:1100px}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#fffefc,#f8fff7);color:#23120f}
+.wrap{max-width:var(--maxw);margin:32px auto;padding:28px}
+.header{text-align:center;font-size:30px;color:var(--wine);font-weight:800;margin-bottom:10px}
+.lead{text-align:center;color:var(--muted);margin-bottom:28px}
+
+.steps{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+.step{flex:1 1 220px;background:#fff;border-radius:18px;padding:20px;box-shadow:var(--shadow);min-width:220px;position:relative;overflow:hidden}
+.icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;background:linear-gradient(180deg,#f6fff5,#e8f8ec);color:var(--accent);margin-bottom:12px}
+.step h3{margin:0 0 8px;color:var(--wine);font-size:18px}
+.step p{margin:0;color:var(--muted);line-height:1.5}
+.badge{display:inline-block;margin-top:12px;padding:6px 10px;border-radius:12px;background:rgba(47,156,98,0.12);color:var(--accent);font-weight:700;font-size:13px}
+
+.flow{display:flex;align-items:center;justify-content:center;gap:14px;margin:28px 0}
+.arrow{font-size:22px;color:#bdbdbd}
+
+.footer{margin-top:18px;text-align:center;color:var(--muted)}
+
+@media(max-width:900px){.steps{flex-direction:column;align-items:center}.step{width:92%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">How It Works — The Process</div>
+  <div class="lead">A clear, sustainable production flow from farm to bottle — designed to support communities and quality.</div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="icon">🌾</div>
+      <h3>Sourcing</h3>
+      <p>Partner with farmers & tribal communities for millets, honey, mahua and herbs — prioritising organic, fair-trade procurement and local empowerment.</p>
+      <div class="badge">Local sourcing & fair pay</div>
+    </div>
+
+    <div class="step">
+      <div class="icon">🧪</div>
+      <h3>Production</h3>
+      <p>Modern fermentation and food-tech processes ensure controlled, safe fermentation — while retaining traditional recipes and flavors.</p>
+      <div class="badge">Controlled fermentation</div>
+    </div>
+
+    <div class="step">
+      <div class="icon">🏺</div>
+      <h3>Packaging</h3>
+      <p>Eco-friendly wooden bottles lined with pine latex, plus refill programs and biodegradable secondary packaging to reduce plastic waste.</p>
+      <div class="badge">Reusable + low-waste</div>
+    </div>
+
+    <div class="step">
+      <div class="icon">🚚</div>
+      <h3>Distribution</h3>
+      <p>Multi-channel distribution via cafes, Ayurveda stores, e-commerce, and export partnerships with sustainable logistics and cold-chain as needed.</p>
+      <div class="badge">Omni-channel reach</div>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div>Farm</div><div class="arrow">→</div><div>Production</div><div class="arrow">→</div><div>Packaging</div><div class="arrow">→</div><div>Distribution</div>
+  </div>
+
+  <div class="footer">Sustainability highlights: revives millets & honey farming, supports tribal livelihoods, and reduces plastic through circular packaging.</div>
+</div>
+</body>
+</html>
